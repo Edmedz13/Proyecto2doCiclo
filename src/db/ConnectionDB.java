@@ -104,7 +104,32 @@ public class ConnectionDB {
 		 
 		
 	}
-	
+	public void registrarVentaDB(String nombre,Integer cantidad, Double precio){
+		String peticionExiste= "SELECT * FROM ventas "; //
+		int cantidadActual;
+		try{
+			ResultSet result = statement.executeQuery(peticionExiste);
+			while(result.next()){
+				if(result.getString("name").equals(nombre)){
+					cantidadActual = result.getInt("cantidad");
+					String peticion2 = String.format("update ventas set cantidad = %s where name= '%s'",cantidadActual+cantidad,nombre);
+					statement.executeUpdate(peticion2);
+					return; 
+				}
+			}
+		}
+		catch(Exception e){
+			System.out.println(e.getMessage());
+		}
+		String peticionInsertar = String.format("insert into ventas (name, price,cantidad) values ('%s',%s,%s)",nombre,precio,cantidad);
+		try{
+			statement.executeUpdate(peticionInsertar);  // este es un metodo de la clase Statement que permite actualizar la base de datos y le da query como argunmento
+			}	
+		catch (SQLException e) {
+	        System.out.println("Error ");
+	        e.printStackTrace();
+		    }
+	}
 	public void registrarVenta(Object[][] data){
 		String peticion;
 		String nombre;
@@ -114,19 +139,11 @@ public class ConnectionDB {
 			nombre = data[i][0].toString();
 			cantidad = Integer.parseInt((data[i][1]).toString());
 			precio = Double.parseDouble((data[i][2]).toString());
-			peticion = String.format("insert into ventas (name, price,cantidad) values ('%s',%s,%s)",nombre,precio,cantidad);
-			try{
-				statement.executeUpdate(peticion);  // este es un metodo de la clase Statement que permite actualizar la base de datos y le la query como argunmento
-				
-			      		            
-				}	
-				catch (SQLException e) {
-			        System.out.println("Error ");
-			        e.printStackTrace();
-			    }
-		}
-	
+			registrarVentaDB(nombre, cantidad, precio);
+			}
 	}
+	
+	
 	
 	public Object[][] obtenerHistorial(){
 		String peticion = "SELECT * FROM ventas";
