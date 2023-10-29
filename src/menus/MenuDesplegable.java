@@ -82,7 +82,7 @@ public class MenuDesplegable extends JFrame {
 		JMenuItem subMenuGitHub = new JMenuItem("GitHub"); // menu que abre el github 
 		subMenuGitHub.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				abrirURL("https://github.com/Edmedz13/ProyectoFinal");
+				abrirURL("https://github.com/Edmedz13/Proyecto2doCiclo");
 			}
 		});
 		subMenuGitHub.setIcon(new ImageIcon(MenuDesplegable.class.getResource("/Imagenes/github_chico.png")));
