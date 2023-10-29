@@ -88,10 +88,12 @@ public class MenuDesplegable extends JFrame {
 		subMenuGitHub.setIcon(new ImageIcon(MenuDesplegable.class.getResource("/Imagenes/github_chico.png")));
 		mnRepositorio.add(subMenuGitHub);
 		
-		JMenu mnHistorial = new JMenu("Historial");
+		JMenu mnHistorial = new JMenu("Reportes");
+		mnHistorial.setIcon(new ImageIcon(MenuDesplegable.class.getResource("/Imagenes/1486564180-finance-financial-report_81493.png")));
 		menuBar.add(mnHistorial);
 		
 		JMenuItem mntmHistorial = new JMenuItem("Historial");
+		mntmHistorial.setIcon(new ImageIcon(MenuDesplegable.class.getResource("/Imagenes/edit.png")));
 		mntmHistorial.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
