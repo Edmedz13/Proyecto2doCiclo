@@ -28,6 +28,7 @@ public class LoginFrame extends JFrame {
 	private JTextField txtUsuario;
 	private JPasswordField txtPassword;
 	private final JPanel panel_1 = new JPanel();
+	
 
 
 	public static void main(String[] args) {   // Este es el main, acá se corre el programa y empieza con el Login

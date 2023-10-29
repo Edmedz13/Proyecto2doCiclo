@@ -152,16 +152,20 @@ public class ConnectionDB {
 		try{
 			ResultSet result = statement.executeQuery(peticion);
 			int contador =0;
-			salida = new Object[contador][3];
+			salida = new Object[contador][4];
 			contador = 0;
+			double totalVentas = 0;
 			while(result.next()){
-				Object[] venta = new Object[3];
+				Object[] venta = new Object[4];
 				venta[0] = result.getString("name");
 				venta[1] = result.getDouble("price");
 				venta[2] = result.getInt("cantidad");
+				venta[3] = result.getInt("cantidad")*result.getDouble("price");
+				totalVentas+= Double.parseDouble(venta[3].toString());
 				array.add(venta);
 			}
-			salida = new Object[array.size()][3];
+			
+			salida = new Object[array.size()][4];
 			for(int i=0; i<array.size();i++){
 				salida[i] = array.get(i);
 			}

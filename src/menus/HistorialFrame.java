@@ -60,9 +60,9 @@ public class HistorialFrame extends JFrame {
 		lblNewLabel_4.setBounds(44, 328, 103, 14);
 		contentPane.add(lblNewLabel_4);
 		
-		JLabel lblNewLabel_5 = new JLabel("");
-		lblNewLabel_5.setForeground(Color.WHITE);
-		lblNewLabel_5.setBounds(169, 328, 46, 14);
-		contentPane.add(lblNewLabel_5);
+		JLabel lblTotalVentas = new JLabel("");
+		lblTotalVentas.setForeground(Color.WHITE);
+		lblTotalVentas.setBounds(169, 328, 46, 14);
+		contentPane.add(lblTotalVentas);
 	}
 }
