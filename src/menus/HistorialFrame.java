@@ -55,14 +55,5 @@ public class HistorialFrame extends JFrame {
 		JLabel lblNewLabel_3 = new JLabel("SubTotal");
 		lblNewLabel_3.setBounds(342, 54, 62, 14);
 		contentPane.add(lblNewLabel_3);
-		
-		JLabel lblNewLabel_4 = new JLabel("TotalVentas");
-		lblNewLabel_4.setBounds(44, 328, 103, 14);
-		contentPane.add(lblNewLabel_4);
-		
-		JLabel lblTotalVentas = new JLabel("");
-		lblTotalVentas.setForeground(Color.WHITE);
-		lblTotalVentas.setBounds(169, 328, 46, 14);
-		contentPane.add(lblTotalVentas);
 	}
 }

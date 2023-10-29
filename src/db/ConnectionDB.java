@@ -28,23 +28,7 @@ public class ConnectionDB {
 	    }
 
 	}
-	/*public ArrayList<String> getNombres(){
-		String peticion = "SELECT * FROM users";	
-		
-		ArrayList<String> salida = new ArrayList<>();
-		try{
-		ResultSet result = statement.executeQuery(peticion);
-	        while (result.next()){
-	            String name = result.getString("name");
-	            salida.add(name);
-	            
-		}	
-		catch (SQLException e) {
-	        System.out.println("Error ");
-	        e.printStackTrace();
-	    }
-		return salida;
-	}*/
+	
 //Se empiezan a crear los metodos publicos de la clase ConnectionDB
 	public void registrarProductos(String nombre, double precio, int cantidad) {   // definimos un metodo para registrar productos en la BD products , que no retorna nada
 		String precioParseado = String.valueOf(precio); 

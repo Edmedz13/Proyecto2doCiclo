@@ -2,12 +2,9 @@ package menus;
 
 public class Producto {
 	private String nombre;
-	
 	private double precio;
 	private int cantidad;
-	private String marca;
-	private int codigo;
-	private double pito;
+	
 	
 	
 	public Producto(String nombre, double precio, int cantidad) {     // es el constructor de la clase Producto con sus atributos (nombre,precio,cantidad)
@@ -16,12 +13,6 @@ public class Producto {
 		this.cantidad = cantidad;
 	}
 	
-	public Producto(String marca, int codigo, double pito){
-		this.marca=marca;
-		this.codigo = codigo;
-		this.pito=pito;
-	}
-
 	public String getNombre() {
 		return nombre;
 	}
